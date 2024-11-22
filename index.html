@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="KALAJNA - Your destination for the best events and registrations."
+    />
+    <meta
+      name="keywords"
+      content="Kalajna, events, registration, gallery, contact"
+    />
+    <title>Navbar</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Teko:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Styles (Ensure it's loaded after Tailwind) -->
+    <link rel="stylesheet" href="./styles/styles.css?v=1.0" />
+  </head>
+
+  <body class="bg-gray-100 font-sans">
+    <!-- Navbar -->
+    <header class="bg-gray-200 px-6 py-4 rounded-lg shadow-md">
+      <div class="flex justify-between items-center container mx-auto">
+        <div class="text-2xl font-semibold headerbrand">KALAJNA</div>
+        <nav class="hidden md:flex gap-8 items-center text-lg">
+          <a href="#home" class="text-gray-800 hover:text-blue-600">Home</a>
+          <a href="#about" class="text-gray-800 hover:text-blue-600"
+            >About Us</a
+          >
+          <a href="#events" class="text-gray-800 hover:text-blue-600">Events</a>
+          <a href="#gallery" class="text-gray-800 hover:text-blue-600"
+            >Gallery</a
+          >
+          <a href="#registration" class="text-gray-800 hover:text-blue-600"
+            >Registration</a
+          >
+          <a href="#contact" class="text-gray-800 hover:text-blue-600"
+            >Contact Us</a
+          >
+        </nav>
+        <!-- Mobile Menu Button -->
+        <button
+          id="menu-toggle"
+          class="md:hidden text-gray-800 focus:outline-none"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden flex-col gap-4 mt-4 w-full bg-gray-200"
+      >
+        <a href="#home" class="text-gray-800 py-2 block w-full text-center"
+          >Home</a
+        >
+        <a href="#about" class="text-gray-800 py-2 block w-full text-center"
+          >About Us</a
+        >
+        <a href="#events" class="text-gray-800 py-2 block w-full text-center"
+          >Events</a
+        >
+        <a href="#gallery" class="text-gray-800 py-2 block w-full text-center"
+          >Gallery</a
+        >
+        <a
+          href="#registration"
+          class="text-gray-800 py-2 block w-full text-center"
+          >Registration</a
+        >
+        <a href="#contact" class="text-gray-800 py-2 block w-full text-center"
+          >Contact Us</a
+        >
+      </div>
+    </header>
+
+    <!-- Main Content with Video Background -->
+    <main>
+      <section id="home" class="relative w-full h-screen">
+        <video
+          class="absolute left-0 w-full h-full object-cover"
+          autoplay
+          muted
+          loop
+        >
+          <source src="./assets/homebackground4.mp4" type="video/mp4" />
+          Your browser does not support this Video.
+        </video>
+        <div class="content-wrapper absolute text-white">
+          <h1 class="maintext">KALAJNA</h1>
+          <p class="subinfo">
+            With performances that promote unity and pride in our culture,
+            Kalajna gives everyone a chance to appreciate our country’s
+            diversity
+          </p>
+        </div>
+        <div id="countdown-container">
+          <div
+            class="text-center bg-white p-2 rounded-xl shadow-lg max-w-xs w-full mx-auto mt-0 md:mt-0"
+          >
+            <div id="countdown" class="flex space-x justify-center">
+              <div class="time-block bg-gray-100 p-2 rounded-xl text-center">
+                <span id="days" class="text-2xl font-bold">00</span>
+                <p class="text-sm text-gray-500">Days</p>
+              </div>
+              <div class="time-block bg-gray-100 p-2 rounded-xl text-center">
+                <span id="hours" class="text-2xl font-bold">00</span>
+                <p class="text-sm text-gray-500">Hours</p>
+              </div>
+              <div class="time-block bg-gray-100 p-2 rounded-xl text-center">
+                <span id="minutes" class="text-2xl font-bold">00</span>
+                <p class="text-sm text-gray-500">Minutes</p>
+              </div>
+              <div class="time-block bg-gray-100 p-2 rounded-xl text-center">
+                <span id="seconds" class="text-2xl font-bold">00</span>
+                <p class="text-sm text-gray-500">Seconds</p>
+              </div>
+            </div>
+            <div
+              id="expired"
+              class="hidden mt-6 text-xl font-semibold text-red-500"
+            >
+              The event has started!
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About Us Section -->
+
+      <section id="about" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-6 md:px-12 lg:px-20">
+          <div class="flex flex-col md:flex-row items-center gap-12">
+            <!-- Text Content -->
+            <div class="md:w-1/2 order-2 md:order-1 text-center md:text-left">
+              <h2 class="text-4xl font-bold text-gray-800 leading-tight">
+                About <span class="text-blue-600">KALAJNA</span>
+              </h2>
+              <p class="text-gray-600 mt-6 text-lg leading-relaxed">
+                At <strong>KALAJNA</strong>, we aim to bring creativity, energy,
+                and excitement to your world. Our events are designed to
+                inspire, connect, and celebrate. Whether you're here for the fun
+                or the inspiration, you’ll find something extraordinary in
+                everything we do.
+              </p>
+              <p class="text-gray-600 mt-4 text-lg">
+                With a legacy of excellence, we provide world-class experiences
+                that leave lasting memories. Let's create something
+                unforgettable together!
+              </p>
+            </div>
+
+            <!-- Image or Graphic -->
+            <div class="md:w-1/2 order-1 md:order-2">
+              <img
+                src="./assets/img.webp"
+                alt="About Kalajna"
+                class="w-full max-w-lg mx-auto md:mx-0 rounded-xl shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        // Intersection Observer to trigger animations on scroll
+        const elements = document.querySelectorAll(".opacity-0");
+        const options = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.5,
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.remove("opacity-0");
+              entry.target.classList.add(
+                "animate__animated",
+                "animate__fadeIn"
+              );
+              observer.unobserve(entry.target);
+            }
+          });
+        }, options);
+
+        elements.forEach((element) => {
+          observer.observe(element);
+        });
+      </script>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-200 py-6 text-center text-sm text-gray-700">
+      &copy; 2024 KALAJNA. All rights reserved.
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Countdown Timer
+        const countDownDate = new Date("Dec 31, 2024 23:59:59").getTime();
+        const countdownFunction = setInterval(function () {
+          const now = new Date().getTime();
+          const distance = countDownDate - now;
+
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          const minutes = Math.floor(
+            (distance % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          document.getElementById("days").innerHTML = days;
+          document.getElementById("hours").innerHTML = hours;
+          document.getElementById("minutes").innerHTML = minutes;
+          document.getElementById("seconds").innerHTML = seconds;
+
+          if (distance < 0) {
+            clearInterval(countdownFunction);
+            document.getElementById("countdown").classList.add("hidden");
+            document.getElementById("expired").classList.remove("hidden");
+          }
+        }, 1000);
+
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        // Add an event listener to the menu toggle button
+        menuToggle.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>
