@@ -139,3 +139,74 @@ header nav a:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
+
+/* Keyframe Animations */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceSlow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Animation Classes */
+.animate-fadeInRight {
+  animation: fadeInRight 2s ease-in-out;
+}
+
+.animate-bounceSlow {
+  animation: bounceSlow 3s infinite ease-in-out;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.close-modal {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: red;
+  cursor: pointer;
+}
+
+.modal-header {
+  text-align: center;
+}
+
+.modal-body {
+  padding-top: 20px;
+}
+
+.modal-footer {
+  padding-top: 20px;
+  text-align: right;
+}

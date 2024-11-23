@@ -21,6 +21,13 @@
       rel="stylesheet"
     />
 
+    <!-- AOS Library -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -150,13 +157,15 @@
           </div>
         </div>
       </section>
-      <!-- About Us Section -->
-
       <section id="about" class="bg-gray-100 py-16">
         <div class="container mx-auto px-6 md:px-12 lg:px-20">
           <div class="flex flex-col md:flex-row items-center gap-12">
             <!-- Text Content -->
-            <div class="md:w-1/2 order-2 md:order-1 text-center md:text-left">
+            <div
+              class="md:w-1/2 order-2 md:order-1 text-center md:text-left animate-fadeInRight"
+              data-aos="fade-right"
+              data-aos-delay="100"
+            >
               <h2 class="text-4xl font-bold text-gray-800 leading-tight">
                 About <span class="text-blue-600">KALAJNA</span>
               </h2>
@@ -170,12 +179,18 @@
               <p class="text-gray-600 mt-4 text-lg">
                 With a legacy of excellence, we provide world-class experiences
                 that leave lasting memories. Let's create something
-                unforgettable together!
+                unforgettable together! With a legacy of excellence, we provide
+                world-class experiences that leave lasting memories. Let's
+                create something unforgettable together!
               </p>
             </div>
 
             <!-- Image or Graphic -->
-            <div class="md:w-1/2 order-1 md:order-2">
+            <div
+              class="md:w-1/2 order-1 md:order-2 animate-bounceSlow"
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
               <img
                 src="./assets/img.webp"
                 alt="About Kalajna"
@@ -186,32 +201,620 @@
         </div>
       </section>
 
-      <script>
-        // Intersection Observer to trigger animations on scroll
-        const elements = document.querySelectorAll(".opacity-0");
-        const options = {
-          root: null,
-          rootMargin: "0px",
-          threshold: 0.5,
-        };
+      <section id="events" class="bg-blue-50 py-16">
+        <div class="container mx-auto px-6 md:px-12 lg:px-20">
+          <!-- Section Header -->
+          <div data-aos="fade-right">
+            <h2 class="text-4xl font-bold text-gray-800 leading-tight">
+              Upcoming <span class="text-blue-600">Events</span>
+            </h2>
+            <p class="text-gray-600 mt-4 text-lg">
+              Explore 13 spectacular events crafted to inspire, entertain, and
+              bring us all together.
+            </p>
+          </div>
 
-        const observer = new IntersectionObserver((entries, observer) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.remove("opacity-0");
-              entry.target.classList.add(
-                "animate__animated",
-                "animate__fadeIn"
-              );
-              observer.unobserve(entry.target);
-            }
-          });
-        }, options);
+          <!-- Event Grid -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12"
+          >
+            <!-- Event 1 -->
+            <div
+              class="event-card flex items-center space-x-8 bg-white shadow-lg rounded-lg p-6"
+              data-aos="fade-up"
+            >
+              <img
+                src="./assets/eventlogos/samplelogo.png"
+                alt="Event 1 Logo"
+                class="w-32 h-32 rounded-full border-4 border-blue-600 object-cover"
+              />
+              <div>
+                <h3 class="text-2xl font-semibold text-gray-800">
+                  Rhythmic Rendezvous
+                </h3>
+                <p class="text-gray-600 text-sm mt-2">
+                  A spectacular dance celebration featuring Western and Indian
+                  styles, where self-expression, cultural heritage, and
+                  high-energy performances come alive.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block mt-4 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all"
+                  onclick="openModal(1)"
+                  >Know More</a
+                >
+              </div>
+            </div>
 
-        elements.forEach((element) => {
-          observer.observe(element);
-        });
-      </script>
+            <!-- Modal for Event 1 -->
+            <div
+              id="modal-1"
+              class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
+            >
+              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2">
+                <div class="modal-header">
+                  <h2 class="text-3xl font-semibold text-gray-800">
+                    Rhythmic Rendezvous
+                  </h2>
+                  <img
+                    src="./assets/eventlogos/samplelogo.png"
+                    alt="Event 1 Logo"
+                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4"
+                  />
+                </div>
+                <div class="modal-body mt-4">
+                  <p class="text-gray-600">
+                    A spectacular dance celebration featuring Western and Indian
+                    styles, where self-expression, cultural heritage, and
+                    high-energy performances come alive.
+                  </p>
+                  <p class="text-gray-600 mt-4">
+                    <strong>Rules and Details:</strong> (Add rules or any other
+                    details you want about the event here.)
+                  </p>
+                  <p class="text-gray-600 mt-4">
+                    <strong>Additional Info:</strong> (Add any additional info,
+                    such as schedule, judges, etc.)
+                  </p>
+                </div>
+                <div class="modal-footer mt-6 text-right">
+                  <button
+                    class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
+                    onclick="closeModal(1)"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modal for Event 1 -->
+            <div
+              id="modal-1"
+              class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
+            >
+              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2">
+                <div class="modal-header">
+                  <h2 class="text-3xl font-semibold text-gray-800">
+                    Rhythmic Rendezvous
+                  </h2>
+                  <img
+                    src="./assets/eventlogos/samplelogo.png"
+                    alt="Event Logo"
+                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4"
+                  />
+                </div>
+                <div class="modal-body mt-4">
+                  <p class="text-gray-600">
+                    A spectacular dance celebration featuring Western and Indian
+                    styles, where self-expression, cultural heritage, and
+                    high-energy performances come alive.
+                  </p>
+                  <p class="text-gray-600 mt-4">
+                    <strong>Rules and Details:</strong> (Add rules or any other
+                    details you want about the event here.)
+                  </p>
+                  <p class="text-gray-600 mt-4">
+                    <strong>Additional Info:</strong> (Add any additional info,
+                    such as schedule, judges, etc.)
+                  </p>
+                </div>
+                <div class="modal-footer mt-6 text-right">
+                  <button
+                    class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
+                    onclick="closeModal(1)"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Event 2 -->
+            <div
+              class="flex items-center space-x-8 bg-white shadow-lg rounded-lg p-6"
+              data-aos="fade-up"
+            >
+              <img
+                src="./assets/eventlogos/samplelogo.png"
+                alt="Event 2 Logo"
+                class="w-32 h-32 rounded-full border-4 border-blue-600 object-cover"
+              />
+              <div>
+                <h3 class="text-2xl font-semibold text-gray-800">
+                  Harmony Extravaganza
+                </h3>
+                <p class="text-gray-600 text-sm mt-2">
+                  A musical celebration that brings together diverse vocal and
+                  instrumental performances, blending Indian and Western styles
+                  into an unforgettable auditory experience.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block mt-4 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all"
+                  onclick="openModal(2)"
+                  >Know More</a
+                >
+              </div>
+            </div>
+
+            <!-- Modal for Event 2 -->
+            <div
+              id="modal-2"
+              class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
+            >
+              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2">
+                <div class="modal-header">
+                  <h2 class="text-3xl font-semibold text-gray-800">
+                    Harmony Extravaganza
+                  </h2>
+                  <img
+                    src="./assets/eventlogos/samplelogo.png"
+                    alt="Event Logo"
+                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4"
+                  />
+                </div>
+                <div class="modal-body mt-4">
+                  <p class="text-gray-600">
+                    A musical celebration that brings together diverse vocal and
+                    instrumental performances, blending Indian and Western
+                    styles into an unforgettable auditory experience.
+                  </p>
+                  <p class="text-gray-600 mt-4">
+                    <strong>Rules and Details:</strong> (Add rules or any other
+                    details you want about the event here.)
+                  </p>
+                  <p class="text-gray-600 mt-4">
+                    <strong>Additional Info:</strong> (Add any additional info,
+                    such as schedule, judges, etc.)
+                  </p>
+                </div>
+                <div class="modal-footer mt-6 text-right">
+                  <button
+                    class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
+                    onclick="closeModal(2)"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Event 3 -->
+            <div
+              class="flex items-center space-x-8 bg-white shadow-lg rounded-lg p-6"
+              data-aos="fade-up"
+            >
+              <img
+                src="./assets/eventlogos/samplelogo.png"
+                alt="Event 3 Logo"
+                class="w-32 h-32 rounded-full border-4 border-blue-600 object-cover"
+              />
+              <div>
+                <h3 class="text-2xl font-semibold text-gray-800">
+                  Epic Drama Dazzle
+                </h3>
+                <p class="text-gray-600 text-sm mt-2">
+                  A captivating theatrical showcase that blends powerful
+                  performances of street plays, mime, and monoacts, bringing
+                  forth raw emotion, activism, and storytelling to the stage.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block mt-4 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all"
+                  onclick="openModal(3)"
+                  >Know More</a
+                >
+              </div>
+            </div>
+
+            <!-- Modal for Event 3 -->
+            <div
+              id="modal-3"
+              class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
+            >
+              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2">
+                <div class="modal-header">
+                  <h2 class="text-3xl font-semibold text-gray-800">
+                    Epic Drama Dazzle
+                  </h2>
+                  <img
+                    src="./assets/eventlogos/samplelogo.png"
+                    alt="Event Logo"
+                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4"
+                  />
+                </div>
+                <div class="modal-body mt-4">
+                  <p class="text-gray-600">
+                    A captivating theatrical showcase that blends powerful
+                    performances of street plays, mime, and monoacts, bringing
+                    forth raw emotion, activism, and storytelling to the stage.
+                  </p>
+                  <p class="text-gray-600 mt-4">
+                    <strong>Rules and Details:</strong> (Add rules or any other
+                    details you want about the event here.)
+                  </p>
+                  <p class="text-gray-600 mt-4">
+                    <strong>Additional Info:</strong> (Add any additional info,
+                    such as schedule, judges, etc.)
+                  </p>
+                </div>
+                <div class="modal-footer mt-6 text-right">
+                  <button
+                    class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
+                    onclick="closeModal(3)"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center space-x-8 bg-white shadow-lg rounded-lg p-6"
+              data-aos="fade-up"
+            >
+              <img
+                src="./assets/eventlogos/samplelogo.png"
+                alt="Event Logo"
+                class="w-32 h-32 rounded-full border-4 border-blue-600 object-cover"
+              />
+              <div>
+                <h3 class="text-2xl font-semibold text-gray-800">Fine Arts</h3>
+                <p class="text-gray-600 text-sm mt-2">
+                  A celebration of creativity and artistic expression, featuring
+                  intricate mandalas, vibrant paintings, and imaginative designs
+                  that transform ordinary spaces into works of art.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block mt-4 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all"
+                  onclick="openModal(4)"
+                  >Know More</a
+                >
+              </div>
+            </div>
+
+            <div
+              id="modal-4"
+              class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
+            >
+              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2">
+                <div class="modal-header">
+                  <h2 class="text-3xl font-semibold text-gray-800">
+                    Fine Arts
+                  </h2>
+                  <img
+                    src="./assets/eventlogos/samplelogo.png"
+                    alt="Event Logo"
+                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4"
+                  />
+                </div>
+                <div class="modal-body mt-4">
+                  <p class="text-gray-600">
+                    A celebration of creativity and artistic expression,
+                    featuring intricate mandalas, vibrant paintings, and
+                    imaginative designs that transform ordinary spaces into
+                    works of art.
+                  </p>
+                  <p class="text-gray-600 mt-4">
+                    <strong>Rules and Details:</strong> (Add rules or any other
+                    details you want about the event here.)
+                  </p>
+                  <p class="text-gray-600 mt-4">
+                    <strong>Additional Info:</strong> (Add any additional info,
+                    such as schedule, judges, etc.)
+                  </p>
+                </div>
+                <div class="modal-footer mt-6 text-right">
+                  <button
+                    class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
+                    onclick="closeModal(4)"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center space-x-8 bg-white shadow-lg rounded-lg p-6"
+              data-aos="fade-up"
+            >
+              <img
+                src="./assets/eventlogos/samplelogo.png"
+                alt="Event Logo"
+                class="w-32 h-32 rounded-full border-4 border-blue-600 object-cover"
+              />
+              <div>
+                <h3 class="text-2xl font-semibold text-gray-800">
+                  Lexicon Gala
+                </h3>
+                <p class="text-gray-600 text-sm mt-2">
+                  A celebration of linguistic creativity, where poets,
+                  wordsmiths, and literary enthusiasts come together to express
+                  themselves through the art of language, from poetry to word
+                  games and captivating tales.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block mt-4 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all"
+                  onclick="openModal(5)"
+                  >Know More</a
+                >
+              </div>
+            </div>
+            <!-- Modal for Lexicon Gala -->
+            <div
+              id="modal-5"
+              class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
+            >
+              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2">
+                <div class="modal-header">
+                  <h2 class="text-3xl font-semibold text-gray-800">
+                    Lexicon Gala
+                  </h2>
+                  <img
+                    src="./assets/eventlogos/samplelogo.png"
+                    alt="Event Logo"
+                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4"
+                  />
+                </div>
+                <div class="modal-body mt-4">
+                  <p class="text-gray-600">
+                    A celebration of linguistic creativity, where poets,
+                    wordsmiths, and literary enthusiasts come together to
+                    express themselves through the art of language, from poetry
+                    to word games and captivating tales.
+                  </p>
+                  <p class="text-gray-600 mt-4">
+                    <strong>Rules and Details:</strong> (Add rules or any other
+                    details you want about the event here.)
+                  </p>
+                  <p class="text-gray-600 mt-4">
+                    <strong>Additional Info:</strong> (Add any additional info,
+                    such as schedule, judges, etc.)
+                  </p>
+                </div>
+                <div class="modal-footer mt-6 text-right">
+                  <button
+                    class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
+                    onclick="closeModal(5)"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center space-x-8 bg-white shadow-lg rounded-lg p-6"
+              data-aos="fade-up"
+            >
+              <img
+                src="./assets/eventlogos/samplelogo.png"
+                alt="Event Logo"
+                class="w-32 h-32 rounded-full border-4 border-blue-600 object-cover"
+              />
+              <div>
+                <h3 class="text-2xl font-semibold text-gray-800">
+                  Cinematic Saga
+                </h3>
+                <p class="text-gray-600 text-sm mt-2">
+                  A celebration of visual storytelling, where directors,
+                  writers, photographers, and vloggers unite to express their
+                  creativity through film, script, and photography.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block mt-4 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all"
+                  onclick="openModal(6)"
+                  >Know More</a
+                >
+              </div>
+            </div>
+            <!-- Modal for Cinematic Saga -->
+            <div
+              id="modal-6"
+              class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
+            >
+              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2">
+                <div class="modal-header">
+                  <h2 class="text-3xl font-semibold text-gray-800">
+                    Cinematic Saga
+                  </h2>
+                  <img
+                    src="./assets/eventlogos/samplelogo.png"
+                    alt="Event Logo"
+                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4"
+                  />
+                </div>
+                <div class="modal-body mt-4">
+                  <p class="text-gray-600">
+                    A celebration of visual storytelling, where directors,
+                    writers, photographers, and vloggers unite to express their
+                    creativity through film, script, and photography.
+                  </p>
+                  <p class="text-gray-600 mt-4">
+                    <strong>Rules and Details:</strong> (Add rules or any other
+                    details you want about the event here.)
+                  </p>
+                  <p class="text-gray-600 mt-4">
+                    <strong>Additional Info:</strong> (Add any additional info,
+                    such as schedule, judges, etc.)
+                  </p>
+                </div>
+                <div class="modal-footer mt-6 text-right">
+                  <button
+                    class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
+                    onclick="closeModal(6)"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Event 4: Quiz -->
+            <div
+              class="flex items-center space-x-8 bg-white shadow-lg rounded-lg p-6"
+              data-aos="fade-up"
+            >
+              <img
+                src="./assets/eventlogos/samplelogo.png"
+                alt="Event Logo"
+                class="w-32 h-32 rounded-full border-4 border-blue-600 object-cover"
+              />
+              <div>
+                <h3 class="text-2xl font-semibold text-gray-800">Quiz</h3>
+                <p class="text-gray-600 text-sm mt-2">
+                  Engage in a battle of wits across various domains like
+                  science, history, economics, entertainment, and current
+                  affairs. Test your knowledge and challenge your intellectual
+                  limits.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block mt-4 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all"
+                  onclick="openModal(7)"
+                  >Know More</a
+                >
+              </div>
+            </div>
+            <!-- Modal for Quiz -->
+            <div
+              id="modal-7"
+              class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
+            >
+              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2">
+                <div class="modal-header">
+                  <h2 class="text-3xl font-semibold text-gray-800">Quiz</h2>
+                  <img
+                    src="./assets/eventlogos/samplelogo.png"
+                    alt="Event Logo"
+                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4"
+                  />
+                </div>
+                <div class="modal-body mt-4">
+                  <p class="text-gray-600">
+                    Engage in a battle of wits across various domains like
+                    science, history, economics, entertainment, and current
+                    affairs. Test your knowledge and challenge your intellectual
+                    limits.
+                  </p>
+                  <p class="text-gray-600 mt-4">
+                    <strong>Rules and Details:</strong> (Add rules or any other
+                    details you want about the event here.)
+                  </p>
+                  <p class="text-gray-600 mt-4">
+                    <strong>Additional Info:</strong> (Add any additional info,
+                    such as schedule, judges, etc.)
+                  </p>
+                </div>
+                <div class="modal-footer mt-6 text-right">
+                  <button
+                    class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
+                    onclick="closeModal(7)"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Event 5: More Fun Events -->
+            <div
+              class="flex items-center space-x-8 bg-white shadow-lg rounded-lg p-6"
+              data-aos="fade-up"
+            >
+              <img
+                src="./assets/eventlogos/samplelogo.png"
+                alt="Event Logo"
+                class="w-32 h-32 rounded-full border-4 border-blue-600 object-cover"
+              />
+              <div>
+                <h3 class="text-2xl font-semibold text-gray-800">
+                  More Fun Events
+                </h3>
+                <p class="text-gray-600 text-sm mt-2">
+                  Compete in Antakshari, showcase intellect in Debate, get
+                  creative with Cooking Without Fire, take on challenges in
+                  Roadies, shine in the Spotlight, and flaunt your style in Ramp
+                  Walk!
+                </p>
+                <a
+                  href="#"
+                  class="inline-block mt-4 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all"
+                  onclick="openModal(8)"
+                  >Know More</a
+                >
+              </div>
+            </div>
+            <!-- Modal for More Fun Events -->
+            <div
+              id="modal-8"
+              class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
+            >
+              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2">
+                <div class="modal-header">
+                  <h2 class="text-3xl font-semibold text-gray-800">
+                    More Fun Events
+                  </h2>
+                  <img
+                    src="./assets/eventlogos/samplelogo.png"
+                    alt="Event Logo"
+                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4"
+                  />
+                </div>
+                <div class="modal-body mt-4">
+                  <p class="text-gray-600">
+                    Compete in Antakshari, showcase intellect in Debate, get
+                    creative with Cooking Without Fire, take on challenges in
+                    Roadies, shine in the Spotlight, and flaunt your style in
+                    Ramp Walk!
+                  </p>
+                  <p class="text-gray-600 mt-4">
+                    <strong>Rules and Details:</strong> (Add rules or any other
+                    details you want about the event here.)
+                  </p>
+                  <p class="text-gray-600 mt-4">
+                    <strong>Additional Info:</strong> (Add any additional info,
+                    such as schedule, judges, etc.)
+                  </p>
+                </div>
+                <div class="modal-footer mt-6 text-right">
+                  <button
+                    class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
+                    onclick="closeModal(8)"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
@@ -220,6 +823,52 @@
     </footer>
 
     <script>
+      // Function to open the modal
+      function openModal(eventId) {
+        const modal = document.getElementById(`modal-${eventId}`);
+        modal.classList.remove("hidden");
+        modal.classList.add("flex"); // Display the modal
+
+        // Prevent body scroll when modal is open
+        document.body.style.overflow = "hidden";
+      }
+
+      // Function to close the modal
+      function closeModal(eventId) {
+        const modal = document.getElementById(`modal-${eventId}`);
+        modal.classList.remove("flex");
+        modal.classList.add("hidden"); // Hide the modal
+
+        // Re-enable body scroll when modal is closed
+        document.body.style.overflow = "auto";
+
+        // Scroll to the Events section
+        const eventsSection = document.getElementById("events");
+        if (eventsSection) {
+          eventsSection.scrollIntoView({
+            behavior: "smooth", // Smooth scrolling animation
+            block: "start", // Scroll to the top of the section
+          });
+        }
+      }
+
+      // Prevent the modal from closing when clicking outside the modal content
+      document.querySelectorAll(".modal").forEach((modal) => {
+        modal.addEventListener("click", function (event) {
+          // Ensure that clicks inside the modal content (not the background) don't close the modal
+          if (event.target === modal) {
+            // Do nothing (prevent modal from closing)
+            event.stopPropagation();
+          }
+        });
+      });
+
+      AOS.init({
+        duration: 1000, // Animation duration
+        easing: "ease-in-out", // Animation easing
+        once: false, // Set to false so animations re-trigger on scroll
+        mirror: true, // Allow animations when scrolling up
+      });
       document.addEventListener("DOMContentLoaded", function () {
         // Countdown Timer
         const countDownDate = new Date("Dec 31, 2024 23:59:59").getTime();
