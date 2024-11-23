@@ -104,6 +104,17 @@ nav a:hover {
   z-index: 999;
 }
 
+.timerhide {
+  visibility: hidden;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 50%;
+
+  transform: translateX(50%);
+  z-index: 999;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;

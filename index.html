@@ -46,9 +46,7 @@
             >About Us</a
           >
           <a href="#events" class="text-gray-800 hover:text-blue-600">Events</a>
-          <a href="#gallery" class="text-gray-800 hover:text-blue-600"
-            >Gallery</a
-          >
+          <a href="#rules" class="text-gray-800 hover:text-blue-600">Rules</a>
           <a href="#registration" class="text-gray-800 hover:text-blue-600"
             >Registration</a
           >
@@ -92,8 +90,8 @@
         <a href="#events" class="text-gray-800 py-2 block w-full text-center"
           >Events</a
         >
-        <a href="#gallery" class="text-gray-800 py-2 block w-full text-center"
-          >Gallery</a
+        <a href="#rules" class="text-gray-800 py-2 block w-full text-center"
+          >Rules</a
         >
         <a
           href="#registration"
@@ -247,23 +245,33 @@
             </div>
 
             <!-- Modal for Event 1 -->
+            <!-- Modal Content -->
             <div
               id="modal-1"
               class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
             >
-              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2">
+              <div
+                class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2 relative"
+              >
                 <div class="modal-header">
                   <h2 class="text-3xl font-semibold text-gray-800">
                     Rhythmic Rendezvous
                   </h2>
+                  <!-- Close Button -->
+                  <span
+                    class="close-modal absolute top-0 right-0 p-4 cursor-pointer text-3xl text-black hover:text-red-600 transition-all"
+                    onclick="closeModal(1)"
+                  >
+                    ×</span
+                  >
+                </div>
+                <div class="modal-body mt-4">
                   <img
                     src="./assets/eventlogos/samplelogo.png"
                     alt="Event 1 Logo"
-                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4"
+                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4 mx-auto"
                   />
-                </div>
-                <div class="modal-body mt-4">
-                  <p class="text-gray-600">
+                  <p class="text-gray-600 mt-4">
                     A spectacular dance celebration featuring Western and Indian
                     styles, where self-expression, cultural heritage, and
                     high-energy performances come alive.
@@ -278,53 +286,12 @@
                   </p>
                 </div>
                 <div class="modal-footer mt-6 text-right">
+                  <!-- Register Button -->
                   <button
-                    class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
-                    onclick="closeModal(1)"
+                    class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+                    onclick="goToRegisterAndClose()"
                   >
-                    Close
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Modal for Event 1 -->
-            <div
-              id="modal-1"
-              class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
-            >
-              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2">
-                <div class="modal-header">
-                  <h2 class="text-3xl font-semibold text-gray-800">
-                    Rhythmic Rendezvous
-                  </h2>
-                  <img
-                    src="./assets/eventlogos/samplelogo.png"
-                    alt="Event Logo"
-                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4"
-                  />
-                </div>
-                <div class="modal-body mt-4">
-                  <p class="text-gray-600">
-                    A spectacular dance celebration featuring Western and Indian
-                    styles, where self-expression, cultural heritage, and
-                    high-energy performances come alive.
-                  </p>
-                  <p class="text-gray-600 mt-4">
-                    <strong>Rules and Details:</strong> (Add rules or any other
-                    details you want about the event here.)
-                  </p>
-                  <p class="text-gray-600 mt-4">
-                    <strong>Additional Info:</strong> (Add any additional info,
-                    such as schedule, judges, etc.)
-                  </p>
-                </div>
-                <div class="modal-footer mt-6 text-right">
-                  <button
-                    class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
-                    onclick="closeModal(1)"
-                  >
-                    Close
+                    Register Now
                   </button>
                 </div>
               </div>
@@ -363,19 +330,28 @@
               id="modal-2"
               class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
             >
-              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2">
+              <div
+                class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2 relative"
+              >
                 <div class="modal-header">
                   <h2 class="text-3xl font-semibold text-gray-800">
                     Harmony Extravaganza
                   </h2>
+                  <!-- Close Button -->
+                  <span
+                    class="close-modal absolute top-0 right-0 p-4 cursor-pointer text-3xl text-black hover:text-red-600 transition-all"
+                    onclick="closeModal(2)"
+                  >
+                    ×
+                  </span>
+                </div>
+                <div class="modal-body mt-4">
                   <img
                     src="./assets/eventlogos/samplelogo.png"
                     alt="Event Logo"
-                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4"
+                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4 mx-auto"
                   />
-                </div>
-                <div class="modal-body mt-4">
-                  <p class="text-gray-600">
+                  <p class="text-gray-600 mt-4">
                     A musical celebration that brings together diverse vocal and
                     instrumental performances, blending Indian and Western
                     styles into an unforgettable auditory experience.
@@ -390,11 +366,12 @@
                   </p>
                 </div>
                 <div class="modal-footer mt-6 text-right">
+                  <!-- Register Button -->
                   <button
-                    class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
-                    onclick="closeModal(2)"
+                    class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+                    onclick="goToRegisterAndClose()"
                   >
-                    Close
+                    Register Now
                   </button>
                 </div>
               </div>
@@ -433,19 +410,28 @@
               id="modal-3"
               class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
             >
-              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2">
+              <div
+                class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2 relative"
+              >
                 <div class="modal-header">
                   <h2 class="text-3xl font-semibold text-gray-800">
                     Epic Drama Dazzle
                   </h2>
+                  <!-- Close Button -->
+                  <span
+                    class="close-modal absolute top-0 right-0 p-4 cursor-pointer text-3xl text-black hover:text-red-600 transition-all"
+                    onclick="closeModal(3)"
+                  >
+                    ×
+                  </span>
+                </div>
+                <div class="modal-body mt-4">
                   <img
                     src="./assets/eventlogos/samplelogo.png"
                     alt="Event Logo"
-                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4"
+                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4 mx-auto"
                   />
-                </div>
-                <div class="modal-body mt-4">
-                  <p class="text-gray-600">
+                  <p class="text-gray-600 mt-4">
                     A captivating theatrical showcase that blends powerful
                     performances of street plays, mime, and monoacts, bringing
                     forth raw emotion, activism, and storytelling to the stage.
@@ -460,11 +446,12 @@
                   </p>
                 </div>
                 <div class="modal-footer mt-6 text-right">
+                  <!-- Register Button -->
                   <button
-                    class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
-                    onclick="closeModal(3)"
+                    class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+                    onclick="goToRegisterAndClose()"
                   >
-                    Close
+                    Register Now
                   </button>
                 </div>
               </div>
@@ -499,19 +486,28 @@
               id="modal-4"
               class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
             >
-              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2">
+              <div
+                class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2 relative"
+              >
                 <div class="modal-header">
                   <h2 class="text-3xl font-semibold text-gray-800">
                     Fine Arts
                   </h2>
+                  <!-- Close Button -->
+                  <span
+                    class="close-modal absolute top-0 right-0 p-4 cursor-pointer text-3xl text-black hover:text-red-600 transition-all"
+                    onclick="closeModal(4)"
+                  >
+                    ×
+                  </span>
+                </div>
+                <div class="modal-body mt-4">
                   <img
                     src="./assets/eventlogos/samplelogo.png"
                     alt="Event Logo"
-                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4"
+                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4 mx-auto"
                   />
-                </div>
-                <div class="modal-body mt-4">
-                  <p class="text-gray-600">
+                  <p class="text-gray-600 mt-4">
                     A celebration of creativity and artistic expression,
                     featuring intricate mandalas, vibrant paintings, and
                     imaginative designs that transform ordinary spaces into
@@ -527,11 +523,12 @@
                   </p>
                 </div>
                 <div class="modal-footer mt-6 text-right">
+                  <!-- Register Button -->
                   <button
-                    class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
-                    onclick="closeModal(4)"
+                    class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+                    onclick="goToRegisterAndClose()"
                   >
-                    Close
+                    Register Now
                   </button>
                 </div>
               </div>
@@ -569,19 +566,28 @@
               id="modal-5"
               class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
             >
-              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2">
+              <div
+                class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2 relative"
+              >
                 <div class="modal-header">
                   <h2 class="text-3xl font-semibold text-gray-800">
                     Lexicon Gala
                   </h2>
+                  <!-- Close Button -->
+                  <span
+                    class="close-modal absolute top-0 right-0 p-4 cursor-pointer text-3xl text-black hover:text-red-600 transition-all"
+                    onclick="closeModal(5)"
+                  >
+                    ×
+                  </span>
+                </div>
+                <div class="modal-body mt-4">
                   <img
                     src="./assets/eventlogos/samplelogo.png"
                     alt="Event Logo"
-                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4"
+                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4 mx-auto"
                   />
-                </div>
-                <div class="modal-body mt-4">
-                  <p class="text-gray-600">
+                  <p class="text-gray-600 mt-4">
                     A celebration of linguistic creativity, where poets,
                     wordsmiths, and literary enthusiasts come together to
                     express themselves through the art of language, from poetry
@@ -597,11 +603,12 @@
                   </p>
                 </div>
                 <div class="modal-footer mt-6 text-right">
+                  <!-- Register Button -->
                   <button
-                    class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
-                    onclick="closeModal(5)"
+                    class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+                    onclick="goToRegisterAndClose()"
                   >
-                    Close
+                    Register Now
                   </button>
                 </div>
               </div>
@@ -638,19 +645,28 @@
               id="modal-6"
               class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
             >
-              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2">
+              <div
+                class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2 relative"
+              >
                 <div class="modal-header">
                   <h2 class="text-3xl font-semibold text-gray-800">
                     Cinematic Saga
                   </h2>
+                  <!-- Close Button -->
+                  <span
+                    class="close-modal absolute top-0 right-0 p-4 cursor-pointer text-3xl text-black hover:text-red-600 transition-all"
+                    onclick="closeModal(6)"
+                  >
+                    ×
+                  </span>
+                </div>
+                <div class="modal-body mt-4">
                   <img
                     src="./assets/eventlogos/samplelogo.png"
                     alt="Event Logo"
-                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4"
+                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4 mx-auto"
                   />
-                </div>
-                <div class="modal-body mt-4">
-                  <p class="text-gray-600">
+                  <p class="text-gray-600 mt-4">
                     A celebration of visual storytelling, where directors,
                     writers, photographers, and vloggers unite to express their
                     creativity through film, script, and photography.
@@ -665,11 +681,12 @@
                   </p>
                 </div>
                 <div class="modal-footer mt-6 text-right">
+                  <!-- Register Button -->
                   <button
-                    class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
-                    onclick="closeModal(6)"
+                    class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+                    onclick="goToRegisterAndClose()"
                   >
-                    Close
+                    Register Now
                   </button>
                 </div>
               </div>
@@ -706,17 +723,26 @@
               id="modal-7"
               class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
             >
-              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2">
+              <div
+                class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2 relative"
+              >
                 <div class="modal-header">
                   <h2 class="text-3xl font-semibold text-gray-800">Quiz</h2>
+                  <!-- Close Button -->
+                  <span
+                    class="close-modal absolute top-0 right-0 p-4 cursor-pointer text-3xl text-black hover:text-red-600 transition-all"
+                    onclick="closeModal(7)"
+                  >
+                    ×
+                  </span>
+                </div>
+                <div class="modal-body mt-4">
                   <img
                     src="./assets/eventlogos/samplelogo.png"
                     alt="Event Logo"
-                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4"
+                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4 mx-auto"
                   />
-                </div>
-                <div class="modal-body mt-4">
-                  <p class="text-gray-600">
+                  <p class="text-gray-600 mt-4">
                     Engage in a battle of wits across various domains like
                     science, history, economics, entertainment, and current
                     affairs. Test your knowledge and challenge your intellectual
@@ -732,11 +758,12 @@
                   </p>
                 </div>
                 <div class="modal-footer mt-6 text-right">
+                  <!-- Register Button -->
                   <button
-                    class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
-                    onclick="closeModal(7)"
+                    class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+                    onclick="goToRegisterAndClose()"
                   >
-                    Close
+                    Register Now
                   </button>
                 </div>
               </div>
@@ -775,19 +802,28 @@
               id="modal-8"
               class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
             >
-              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2">
+              <div
+                class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2 relative"
+              >
                 <div class="modal-header">
                   <h2 class="text-3xl font-semibold text-gray-800">
                     More Fun Events
                   </h2>
+                  <!-- Close Button -->
+                  <span
+                    class="close-modal absolute top-0 right-0 p-4 cursor-pointer text-3xl text-black hover:text-red-600 transition-all"
+                    onclick="closeModal(8)"
+                  >
+                    ×
+                  </span>
+                </div>
+                <div class="modal-body mt-4">
                   <img
                     src="./assets/eventlogos/samplelogo.png"
                     alt="Event Logo"
-                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4"
+                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4 mx-auto"
                   />
-                </div>
-                <div class="modal-body mt-4">
-                  <p class="text-gray-600">
+                  <p class="text-gray-600 mt-4">
                     Compete in Antakshari, showcase intellect in Debate, get
                     creative with Cooking Without Fire, take on challenges in
                     Roadies, shine in the Spotlight, and flaunt your style in
@@ -803,11 +839,12 @@
                   </p>
                 </div>
                 <div class="modal-footer mt-6 text-right">
+                  <!-- Register Button -->
                   <button
-                    class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
-                    onclick="closeModal(8)"
+                    class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+                    onclick="goToRegisterAndClose()"
                   >
-                    Close
+                    Register Now
                   </button>
                 </div>
               </div>
@@ -815,11 +852,169 @@
           </div>
         </div>
       </section>
+
+      <section id="rules" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-6 md:px-12 lg:px-20">
+          <div class="text-center md:text-left">
+            <h2 class="text-4xl font-bold text-gray-800 leading-tight">
+              <span class="text-blue-600">Rules</span> & Regulations
+            </h2>
+            <p class="text-gray-600 mt-4 text-lg leading-relaxed">
+              Please read the rules and regulations carefully before registering
+              for the event. Violation of any rule may lead to disqualification.
+            </p>
+          </div>
+
+          <!-- Rules List -->
+          <div
+            class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
+          >
+            <div class="rule-card bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-semibold text-gray-800">
+                Institute Participation
+              </h3>
+              <p class="text-gray-600 mt-4">
+                The original permission letter from the participating institute
+                along with the copy of government issued identity cards should
+                be submitted at the registration desk before the commencement of
+                the fest.
+              </p>
+            </div>
+            <div class="rule-card bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-semibold text-gray-800">
+                Event Registration
+              </h3>
+              <p class="text-gray-600 mt-4">
+                A participant can register for a maximum of three events.
+              </p>
+            </div>
+            <div class="rule-card bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-semibold text-gray-800">
+                Disqualification
+              </h3>
+              <p class="text-gray-600 mt-4">
+                The college will not be eligible for the overall championship if
+                their team has been disqualified from any event.
+              </p>
+            </div>
+            <div class="rule-card bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-semibold text-gray-800">
+                Event Submissions
+              </h3>
+              <p class="text-gray-600 mt-4">
+                Submission of any information related to events (e.g., music,
+                photographs) must be provided in a pen drive before the event
+                commences.
+              </p>
+            </div>
+            <div class="rule-card bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-semibold text-gray-800">
+                Reporting Time
+              </h3>
+              <p class="text-gray-600 mt-4">
+                All participants must report at the venue at least one hour
+                prior to the commencement of the event.
+              </p>
+            </div>
+            <div class="rule-card bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-semibold text-gray-800">
+                Alcohol and Substance Use
+              </h3>
+              <p class="text-gray-600 mt-4">
+                Consumption of alcohol, narcotics, and other illegal substances
+                anywhere on campus is strictly prohibited.
+              </p>
+            </div>
+            <div class="rule-card bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-semibold text-gray-800">
+                Organizers' Rights
+              </h3>
+              <p class="text-gray-600 mt-4">
+                Organizers hold the right to change event rules before the event
+                begins without prior notice.
+              </p>
+            </div>
+            <div class="rule-card bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-semibold text-gray-800">
+                Responsibility
+              </h3>
+              <p class="text-gray-600 mt-4">
+                Organizers are not responsible for any loss or damage to
+                participants' personal belongings.
+              </p>
+            </div>
+            <div class="rule-card bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-semibold text-gray-800">Violation</h3>
+              <p class="text-gray-600 mt-4">
+                Any participant found violating the rules may be immediately
+                expelled from the campus and disqualified from all events.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-200 py-6 text-center text-sm text-gray-700">
-      &copy; 2024 KALAJNA. All rights reserved.
+    <footer id="contact" class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6 lg:px-20">
+        <!-- Footer top section with copyright -->
+        <div class="text-center mb-8">
+          <p class="text-lg font-medium text-gray-400">
+            &copy; 2024 KALAJNA. All rights reserved.
+          </p>
+        </div>
+
+        <!-- Footer bottom section with contact details -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <!-- Faculty Coordinator Section -->
+          <div class="text-center md:text-left">
+            <h3 class="text-2xl font-semibold text-blue-600 mb-4">
+              Faculty Coordinator
+            </h3>
+            <p class="text-lg text-gray-300 mb-2">Mr. Prashant Nayak</p>
+            <p class="text-gray-400 mb-2">+91 96635 58247</p>
+            <p class="text-gray-400">
+              <a
+                href="https://www.kalajna.co.in"
+                class="text-blue-400 hover:underline"
+                >www.kalajna.co.in</a
+              >
+            </p>
+            <p class="text-gray-400 mt-2">
+              NGSM Institute of Pharmaceutical Sciences
+            </p>
+            <p class="text-gray-400">
+              NITTE DU, Paneer Campus, Deralakatte, Mangaluru-575 018
+            </p>
+          </div>
+
+          <!-- Student Coordinator 1 Section -->
+          <div class="text-center md:text-left">
+            <h3 class="text-2xl font-semibold text-blue-600 mb-4">
+              Student Coordinator
+            </h3>
+            <p class="text-lg text-gray-300 mb-2">Ms. Sheavon Serrao</p>
+            <p class="text-gray-400 mb-2">+91 7795072421</p>
+          </div>
+
+          <!-- Student Coordinator 2 Section -->
+          <div class="text-center md:text-left">
+            <h3 class="text-2xl font-semibold text-blue-600 mb-4">
+              Student Coordinator
+            </h3>
+            <p class="text-lg text-gray-300 mb-2">Mr. Keith D’Cunha</p>
+            <p class="text-gray-400 mb-2">+91 7204149203</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer bottom bar with address and additional space -->
+      <div class="bg-gray-800 py-4 mt-8 text-center">
+        <p class="text-sm text-gray-400">
+          NGSM Institute of Pharmaceutical Sciences, NITTE DU, Paneer Campus,
+          Deralakatte, Mangaluru-575 018
+        </p>
+      </div>
     </footer>
 
     <script>
@@ -829,6 +1024,9 @@
         modal.classList.remove("hidden");
         modal.classList.add("flex"); // Display the modal
 
+        document
+          .getElementById("countdown-container")
+          .classList.add("timerhide");
         // Prevent body scroll when modal is open
         document.body.style.overflow = "hidden";
       }
@@ -838,6 +1036,9 @@
         const modal = document.getElementById(`modal-${eventId}`);
         modal.classList.remove("flex");
         modal.classList.add("hidden"); // Hide the modal
+        document
+          .getElementById("countdown-container")
+          .classList.remove("timerhide");
 
         // Re-enable body scroll when modal is closed
         document.body.style.overflow = "auto";
@@ -864,10 +1065,10 @@
       });
 
       AOS.init({
-        duration: 1000, // Animation duration
-        easing: "ease-in-out", // Animation easing
-        once: false, // Set to false so animations re-trigger on scroll
-        mirror: true, // Allow animations when scrolling up
+        duration: 1000,
+        easing: "ease-in-out",
+        once: false,
+        mirror: true,
       });
       document.addEventListener("DOMContentLoaded", function () {
         // Countdown Timer
@@ -899,6 +1100,20 @@
 
         const menuToggle = document.getElementById("menu-toggle");
         const mobileMenu = document.getElementById("mobile-menu");
+
+        window.addEventListener("scroll", function () {
+          const footer = document.querySelector("footer");
+          const countdownContainer = document.getElementById(
+            "countdown-container"
+          );
+
+          const footerPosition = footer.getBoundingClientRect().top;
+
+          // If the footer is in view, hide the timer by adding 'timerhide' class
+          if (footerPosition <= window.innerHeight) {
+            countdownContainer.classList.add("timerhide");
+          }
+        });
 
         // Add an event listener to the menu toggle button
         menuToggle.addEventListener("click", () => {
