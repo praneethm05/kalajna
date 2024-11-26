@@ -108,20 +108,20 @@
     <main>
       <section id="home" class="relative w-full h-screen">
         <video
-          class="absolute left-0 w-full h-full object-cover"
-          autoplay
-          muted
-          loop
-        >
-          <source src="./assets/homebackground4.mp4" type="video/mp4" />
+            class="w-full h-full object-cover filter blur-sm brightness-50"
+            autoplay
+            muted
+            loop
+          >
+          <source src="./assets/homebackground1.mp4" type="video/mp4" />
           Your browser does not support this Video.
         </video>
         <div class="content-wrapper absolute text-white">
           <h1 class="maintext">KALAJNA</h1>
           <p class="subinfo">
-            With performances that promote unity and pride in our culture,
+            <b>With performances that promote unity and pride in our culture,
             Kalajna gives everyone a chance to appreciate our country’s
-            diversity
+            diversity</b>
           </p>
         </div>
         <div id="countdown-container">
@@ -155,49 +155,58 @@
           </div>
         </div>
       </section>
-      <section id="about" class="bg-gray-100 py-16">
-        <div class="container mx-auto px-6 md:px-12 lg:px-20">
-          <div class="flex flex-col md:flex-row items-center gap-12">
-            <!-- Text Content -->
-            <div
-              class="md:w-1/2 order-2 md:order-1 text-center md:text-left animate-fadeInRight"
-              data-aos="fade-right"
-              data-aos-delay="100"
-            >
-              <h2 class="text-4xl font-bold text-gray-800 leading-tight">
-                About <span class="text-blue-600">KALAJNA</span>
-              </h2>
-              <p class="text-gray-600 mt-6 text-lg leading-relaxed">
-                At <strong>KALAJNA</strong>, we aim to bring creativity, energy,
-                and excitement to your world. Our events are designed to
-                inspire, connect, and celebrate. Whether you're here for the fun
-                or the inspiration, you’ll find something extraordinary in
-                everything we do.
-              </p>
-              <p class="text-gray-600 mt-4 text-lg">
-                With a legacy of excellence, we provide world-class experiences
-                that leave lasting memories. Let's create something
-                unforgettable together! With a legacy of excellence, we provide
-                world-class experiences that leave lasting memories. Let's
-                create something unforgettable together!
-              </p>
-            </div>
+      <section 
+  id="about" 
+  class="bg-gray-100 py-16 relative"
+  style="background-image: url('./assets/b2.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;"
+>
+  <!-- Overlay for Blur -->
+  <div class="absolute inset-0  bg-opacity-60 filter blur-lg" style="background-color: rgba(100, 100, 100, 0.219); "></div>
 
-            <!-- Image or Graphic -->
-            <div
-              class="md:w-1/2 order-1 md:order-2 animate-bounceSlow"
-              data-aos="fade-left"
-              data-aos-delay="200"
-            >
-              <img
-                src="./assets/img.webp"
-                alt="About Kalajna"
-                class="w-full max-w-lg mx-auto md:mx-0 rounded-xl shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+  <!-- Content Wrapper -->
+  <div class="relative container mx-auto px-6 md:px-12 lg:px-20">
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      <!-- Text Content -->
+      <div
+        class="md:w-1/2 order-2 md:order-1 text-center md:text-left animate-fadeInRight"
+        data-aos="fade-right"
+        data-aos-delay="100"
+      >
+        <h2 class="text-4xl font-bold text-white leading-tight">
+          About <span class="text-blue-600">KALAJNA</span>
+        </h2>
+        <p class="text-white mt-6 text-lg leading-relaxed">
+          At <strong>KALAJNA</strong>, we aim to bring creativity, energy,
+          and excitement to your world. Our events are designed to
+          inspire, connect, and celebrate. Whether you're here for the fun
+          or the inspiration, you’ll find something extraordinary in
+          everything we do.
+        </p>
+        <p class="text-white mt-4 text-lg">
+          With a legacy of excellence, we provide world-class experiences
+          that leave lasting memories. Let's create something
+          unforgettable together! With a legacy of excellence, we provide
+          world-class experiences that leave lasting memories. Let's
+          create something unforgettable together!
+        </p>
+      </div>
+
+      <!-- Image or Graphic -->
+      <div
+        class="md:w-1/2 order-1 md:order-2 animate-bounceSlow"
+        data-aos="fade-left"
+        data-aos-delay="200"
+      >
+        <img
+          src="./assets/img.webp"
+          alt="About Kalajna"
+          class="w-full max-w-lg mx-auto md:mx-0 rounded-xl shadow-lg"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <section id="events" class="bg-blue-50 py-16">
         <div class="container mx-auto px-6 md:px-12 lg:px-20">
@@ -207,256 +216,141 @@
               Upcoming <span class="text-blue-600">Events</span>
             </h2>
             <p class="text-gray-600 mt-4 text-lg">
-              Explore 13 spectacular events crafted to inspire, entertain, and
-              bring us all together.
+              Explore 13 spectacular events crafted to inspire, entertain, and bring us all together.
             </p>
           </div>
-
+        
           <!-- Event Grid -->
-          <div
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12"
-          >
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
+            
             <!-- Event 1 -->
-            <div
-              class="event-card flex items-center space-x-8 bg-white shadow-lg rounded-lg p-6"
-              data-aos="fade-up"
-            >
-              <img
-                src="./assets/eventlogos/samplelogo.png"
-                alt="Event 1 Logo"
-                class="w-32 h-32 rounded-full border-4 border-blue-600 object-cover"
-              />
+            <div class="event-card flex items-center space-x-8 bg-white shadow-lg rounded-lg p-6" data-aos="fade-up">
+              <img src="./assets/eventlogos/samplelogo.png" alt="Event 1 Logo" class="w-32 h-32 rounded-full border-4 border-blue-600 object-cover"/>
               <div>
-                <h3 class="text-2xl font-semibold text-gray-800">
-                  Rhythmic Rendezvous
-                </h3>
+                <h3 class="text-2xl font-semibold text-gray-800">Rhythmic Rendezvous</h3>
                 <p class="text-gray-600 text-sm mt-2">
-                  A spectacular dance celebration featuring Western and Indian
-                  styles, where self-expression, cultural heritage, and
-                  high-energy performances come alive.
+                  A spectacular dance celebration featuring Western and Indian styles, where self-expression, cultural heritage, and high-energy performances come alive.
                 </p>
-                <a
-                  href="#"
-                  class="inline-block mt-4 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all"
-                  onclick="openModal(1)"
-                  >Know More</a
-                >
+                <a href="#" class="inline-block mt-4 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all" onclick="openModal(1)">Know More</a>
               </div>
             </div>
-
+        
             <!-- Modal for Event 1 -->
-            <!-- Modal Content -->
-            <div
-              id="modal-1"
-              class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
-            >
-              <div
-                class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2 relative"
-              >
+            <div id="modal-1" class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center">
+              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2 relative">
                 <div class="modal-header">
-                  <h2 class="text-3xl font-semibold text-gray-800">
-                    Rhythmic Rendezvous
-                  </h2>
+                  <h2 class="text-3xl font-semibold text-gray-800">Rhythmic Rendezvous</h2>
                   <!-- Close Button -->
-                  <span
-                    class="close-modal absolute top-0 right-0 p-4 cursor-pointer text-3xl text-black hover:text-red-600 transition-all"
-                    onclick="closeModal(1)"
-                  >
-                    ×</span
-                  >
+                  <span class="close-modal absolute top-0 right-0 p-4 cursor-pointer text-3xl text-black hover:text-red-600 transition-all" onclick="closeModal(1)">×</span>
                 </div>
-                <div class="modal-body mt-4">
-                  <img
-                    src="./assets/eventlogos/samplelogo.png"
-                    alt="Event 1 Logo"
-                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4 mx-auto"
-                  />
-                  <p class="text-gray-600 mt-4">
-                    A spectacular dance celebration featuring Western and Indian
-                    styles, where self-expression, cultural heritage, and
-                    high-energy performances come alive.
-                  </p>
-                  <p class="text-gray-600 mt-4">
-                    <strong>Rules and Details:</strong> (Add rules or any other
-                    details you want about the event here.)
-                  </p>
-                  <p class="text-gray-600 mt-4">
-                    <strong>Additional Info:</strong> (Add any additional info,
-                    such as schedule, judges, etc.)
-                  </p>
+                <div class="modal-body mt-4 flex flex-col lg:flex-row items-center lg:space-x-8">
+                  <!-- Image on the left -->
+                  <img src="./assets/eventlogos/samplelogo.png" alt="Event Logo" class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mb-4 lg:mb-0"/>
+                  <!-- Description on the right -->
+                  <div>
+                    <p class="text-gray-600">
+                      A spectacular dance celebration featuring Western and Indian styles, where self-expression, cultural heritage, and high-energy performances come alive.
+                    </p>
+                    <p class="text-gray-600 mt-4">
+                      <strong>Rules and Details:</strong> (Add rules or any other details you want about the event here.)
+                    </p>
+                    <p class="text-gray-600 mt-4">
+                      <strong>Additional Info:</strong> (Add any additional info, such as schedule, judges, etc.)
+                    </p>
+                  </div>
                 </div>
                 <div class="modal-footer mt-6 text-right">
                   <!-- Register Button -->
-                  <button
-                    class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
-                    onclick="goToRegisterAndClose()"
-                  >
-                    Register Now
-                  </button>
+                  <button class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out" onclick="goToRegisterAndClose()">Register Now</button>
                 </div>
               </div>
             </div>
-
+        
             <!-- Event 2 -->
-            <div
-              class="flex items-center space-x-8 bg-white shadow-lg rounded-lg p-6"
-              data-aos="fade-up"
-            >
-              <img
-                src="./assets/eventlogos/samplelogo.png"
-                alt="Event 2 Logo"
-                class="w-32 h-32 rounded-full border-4 border-blue-600 object-cover"
-              />
+            <div class="flex items-center space-x-8 bg-white shadow-lg rounded-lg p-6" data-aos="fade-up">
+              <img src="./assets/eventlogos/samplelogo.png" alt="Event 2 Logo" class="w-32 h-32 rounded-full border-4 border-blue-600 object-cover"/>
               <div>
-                <h3 class="text-2xl font-semibold text-gray-800">
-                  Harmony Extravaganza
-                </h3>
+                <h3 class="text-2xl font-semibold text-gray-800">Harmony Extravaganza</h3>
                 <p class="text-gray-600 text-sm mt-2">
-                  A musical celebration that brings together diverse vocal and
-                  instrumental performances, blending Indian and Western styles
-                  into an unforgettable auditory experience.
+                  A musical celebration that brings together diverse vocal and instrumental performances, blending Indian and Western styles into an unforgettable auditory experience.
                 </p>
-                <a
-                  href="#"
-                  class="inline-block mt-4 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all"
-                  onclick="openModal(2)"
-                  >Know More</a
-                >
+                <a href="#" class="inline-block mt-4 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all" onclick="openModal(2)">Know More</a>
               </div>
             </div>
-
+        
             <!-- Modal for Event 2 -->
-            <div
-              id="modal-2"
-              class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
-            >
-              <div
-                class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2 relative"
-              >
+            <div id="modal-2" class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center">
+              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2 relative">
                 <div class="modal-header">
-                  <h2 class="text-3xl font-semibold text-gray-800">
-                    Harmony Extravaganza
-                  </h2>
+                  <h2 class="text-3xl font-semibold text-gray-800">Harmony Extravaganza</h2>
                   <!-- Close Button -->
-                  <span
-                    class="close-modal absolute top-0 right-0 p-4 cursor-pointer text-3xl text-black hover:text-red-600 transition-all"
-                    onclick="closeModal(2)"
-                  >
-                    ×
-                  </span>
+                  <span class="close-modal absolute top-0 right-0 p-4 cursor-pointer text-3xl text-black hover:text-red-600 transition-all" onclick="closeModal(2)">×</span>
                 </div>
-                <div class="modal-body mt-4">
-                  <img
-                    src="./assets/eventlogos/samplelogo.png"
-                    alt="Event Logo"
-                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4 mx-auto"
-                  />
-                  <p class="text-gray-600 mt-4">
-                    A musical celebration that brings together diverse vocal and
-                    instrumental performances, blending Indian and Western
-                    styles into an unforgettable auditory experience.
-                  </p>
-                  <p class="text-gray-600 mt-4">
-                    <strong>Rules and Details:</strong> (Add rules or any other
-                    details you want about the event here.)
-                  </p>
-                  <p class="text-gray-600 mt-4">
-                    <strong>Additional Info:</strong> (Add any additional info,
-                    such as schedule, judges, etc.)
-                  </p>
+                <div class="modal-body mt-4 flex flex-col lg:flex-row items-center lg:space-x-8">
+                  <!-- Image on the left -->
+                  <img src="./assets/eventlogos/samplelogo.png" alt="Event Logo" class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mb-4 lg:mb-0"/>
+                  <!-- Description on the right -->
+                  <div>
+                    <p class="text-gray-600">
+                      A musical celebration that brings together diverse vocal and instrumental performances, blending Indian and Western styles into an unforgettable auditory experience.
+                    </p>
+                    <p class="text-gray-600 mt-4">
+                      <strong>Rules and Details:</strong> (Add rules or any other details you want about the event here.)
+                    </p>
+                    <p class="text-gray-600 mt-4">
+                      <strong>Additional Info:</strong> (Add any additional info, such as schedule, judges, etc.)
+                    </p>
+                  </div>
                 </div>
                 <div class="modal-footer mt-6 text-right">
                   <!-- Register Button -->
-                  <button
-                    class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
-                    onclick="goToRegisterAndClose()"
-                  >
-                    Register Now
-                  </button>
+                  <button class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out" onclick="goToRegisterAndClose()">Register Now</button>
                 </div>
               </div>
             </div>
-
+        
             <!-- Event 3 -->
-            <div
-              class="flex items-center space-x-8 bg-white shadow-lg rounded-lg p-6"
-              data-aos="fade-up"
-            >
-              <img
-                src="./assets/eventlogos/samplelogo.png"
-                alt="Event 3 Logo"
-                class="w-32 h-32 rounded-full border-4 border-blue-600 object-cover"
-              />
+            <div class="flex items-center space-x-8 bg-white shadow-lg rounded-lg p-6" data-aos="fade-up">
+              <img src="./assets/eventlogos/samplelogo.png" alt="Event 3 Logo" class="w-32 h-32 rounded-full border-4 border-blue-600 object-cover"/>
               <div>
-                <h3 class="text-2xl font-semibold text-gray-800">
-                  Epic Drama Dazzle
-                </h3>
+                <h3 class="text-2xl font-semibold text-gray-800">Epic Drama Dazzle</h3>
                 <p class="text-gray-600 text-sm mt-2">
-                  A captivating theatrical showcase that blends powerful
-                  performances of street plays, mime, and monoacts, bringing
-                  forth raw emotion, activism, and storytelling to the stage.
+                  A captivating theatrical showcase that blends powerful performances of street plays, mime, and monoacts, bringing forth raw emotion, activism, and storytelling to the stage.
                 </p>
-                <a
-                  href="#"
-                  class="inline-block mt-4 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all"
-                  onclick="openModal(3)"
-                  >Know More</a
-                >
+                <a href="#" class="inline-block mt-4 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all" onclick="openModal(3)">Know More</a>
               </div>
             </div>
-
+        
             <!-- Modal for Event 3 -->
-            <div
-              id="modal-3"
-              class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
-            >
-              <div
-                class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2 relative"
-              >
+            <div id="modal-3" class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center">
+              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2 relative">
                 <div class="modal-header">
-                  <h2 class="text-3xl font-semibold text-gray-800">
-                    Epic Drama Dazzle
-                  </h2>
+                  <h2 class="text-3xl font-semibold text-gray-800">Epic Drama Dazzle</h2>
                   <!-- Close Button -->
-                  <span
-                    class="close-modal absolute top-0 right-0 p-4 cursor-pointer text-3xl text-black hover:text-red-600 transition-all"
-                    onclick="closeModal(3)"
-                  >
-                    ×
-                  </span>
+                  <span class="close-modal absolute top-0 right-0 p-4 cursor-pointer text-3xl text-black hover:text-red-600 transition-all" onclick="closeModal(3)">×</span>
                 </div>
-                <div class="modal-body mt-4">
-                  <img
-                    src="./assets/eventlogos/samplelogo.png"
-                    alt="Event Logo"
-                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4 mx-auto"
-                  />
-                  <p class="text-gray-600 mt-4">
-                    A captivating theatrical showcase that blends powerful
-                    performances of street plays, mime, and monoacts, bringing
-                    forth raw emotion, activism, and storytelling to the stage.
-                  </p>
-                  <p class="text-gray-600 mt-4">
-                    <strong>Rules and Details:</strong> (Add rules or any other
-                    details you want about the event here.)
-                  </p>
-                  <p class="text-gray-600 mt-4">
-                    <strong>Additional Info:</strong> (Add any additional info,
-                    such as schedule, judges, etc.)
-                  </p>
+                <div class="modal-body mt-4 flex flex-col lg:flex-row items-center lg:space-x-8">
+                  <!-- Image on the left -->
+                  <img src="./assets/eventlogos/samplelogo.png" alt="Event Logo" class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mb-4 lg:mb-0"/>
+                  <!-- Description on the right -->
+                  <div>
+                    <p class="text-gray-600">
+                      A captivating theatrical showcase that blends powerful performances of street plays, mime, and monoacts, bringing forth raw emotion, activism, and storytelling to the stage.
+                    </p>
+                    <p class="text-gray-600 mt-4">
+                      <strong>Rules and Details:</strong> (Add rules or any other details you want about the event here.)
+                    </p>
+                    <p class="text-gray-600 mt-4">
+                      <strong>Additional Info:</strong> (Add any additional info, such as schedule, judges, etc.)
+                    </p>
+                  </div>
                 </div>
                 <div class="modal-footer mt-6 text-right">
                   <!-- Register Button -->
-                  <button
-                    class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
-                    onclick="goToRegisterAndClose()"
-                  >
-                    Register Now
-                  </button>
+                  <button class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out" onclick="goToRegisterAndClose()">Register Now</button>
                 </div>
               </div>
             </div>
-
             <div
               class="flex items-center space-x-8 bg-white shadow-lg rounded-lg p-6"
               data-aos="fade-up"
@@ -482,17 +376,10 @@
               </div>
             </div>
 
-            <div
-              id="modal-4"
-              class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
-            >
-              <div
-                class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2 relative"
-              >
+            <div id="modal-4" class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center">
+              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2 relative">
                 <div class="modal-header">
-                  <h2 class="text-3xl font-semibold text-gray-800">
-                    Fine Arts
-                  </h2>
+                  <h2 class="text-3xl font-semibold text-gray-800">Fine Arts</h2>
                   <!-- Close Button -->
                   <span
                     class="close-modal absolute top-0 right-0 p-4 cursor-pointer text-3xl text-black hover:text-red-600 transition-all"
@@ -501,26 +388,26 @@
                     ×
                   </span>
                 </div>
-                <div class="modal-body mt-4">
+                <div class="modal-body mt-4 flex flex-col lg:flex-row items-center lg:space-x-8">
+                  <!-- Image on the left -->
                   <img
                     src="./assets/eventlogos/samplelogo.png"
                     alt="Event Logo"
-                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4 mx-auto"
+                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mb-4 lg:mb-0"
                   />
-                  <p class="text-gray-600 mt-4">
-                    A celebration of creativity and artistic expression,
-                    featuring intricate mandalas, vibrant paintings, and
-                    imaginative designs that transform ordinary spaces into
-                    works of art.
-                  </p>
-                  <p class="text-gray-600 mt-4">
-                    <strong>Rules and Details:</strong> (Add rules or any other
-                    details you want about the event here.)
-                  </p>
-                  <p class="text-gray-600 mt-4">
-                    <strong>Additional Info:</strong> (Add any additional info,
-                    such as schedule, judges, etc.)
-                  </p>
+                  <!-- Description on the right -->
+                  <div>
+                    <p class="text-gray-600">
+                      A celebration of creativity and artistic expression, featuring intricate mandalas, vibrant paintings, and
+                      imaginative designs that transform ordinary spaces into works of art.
+                    </p>
+                    <p class="text-gray-600 mt-4">
+                      <strong>Rules and Details:</strong> (Add rules or any other details you want about the event here.)
+                    </p>
+                    <p class="text-gray-600 mt-4">
+                      <strong>Additional Info:</strong> (Add any additional info, such as schedule, judges, etc.)
+                    </p>
+                  </div>
                 </div>
                 <div class="modal-footer mt-6 text-right">
                   <!-- Register Button -->
@@ -533,6 +420,7 @@
                 </div>
               </div>
             </div>
+            
 
             <div
               class="flex items-center space-x-8 bg-white shadow-lg rounded-lg p-6"
@@ -562,17 +450,10 @@
               </div>
             </div>
             <!-- Modal for Lexicon Gala -->
-            <div
-              id="modal-5"
-              class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
-            >
-              <div
-                class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2 relative"
-              >
+            <div id="modal-5" class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center">
+              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2 relative">
                 <div class="modal-header">
-                  <h2 class="text-3xl font-semibold text-gray-800">
-                    Lexicon Gala
-                  </h2>
+                  <h2 class="text-3xl font-semibold text-gray-800">Lexicon Gala</h2>
                   <!-- Close Button -->
                   <span
                     class="close-modal absolute top-0 right-0 p-4 cursor-pointer text-3xl text-black hover:text-red-600 transition-all"
@@ -581,26 +462,26 @@
                     ×
                   </span>
                 </div>
-                <div class="modal-body mt-4">
+                <div class="modal-body mt-4 flex flex-col lg:flex-row items-center lg:space-x-8">
+                  <!-- Image on the left -->
                   <img
                     src="./assets/eventlogos/samplelogo.png"
                     alt="Event Logo"
-                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4 mx-auto"
+                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mb-4 lg:mb-0"
                   />
-                  <p class="text-gray-600 mt-4">
-                    A celebration of linguistic creativity, where poets,
-                    wordsmiths, and literary enthusiasts come together to
-                    express themselves through the art of language, from poetry
-                    to word games and captivating tales.
-                  </p>
-                  <p class="text-gray-600 mt-4">
-                    <strong>Rules and Details:</strong> (Add rules or any other
-                    details you want about the event here.)
-                  </p>
-                  <p class="text-gray-600 mt-4">
-                    <strong>Additional Info:</strong> (Add any additional info,
-                    such as schedule, judges, etc.)
-                  </p>
+                  <!-- Description on the right -->
+                  <div>
+                    <p class="text-gray-600">
+                      A celebration of linguistic creativity, where poets, wordsmiths, and literary enthusiasts come together to
+                      express themselves through the art of language, from poetry to word games and captivating tales.
+                    </p>
+                    <p class="text-gray-600 mt-4">
+                      <strong>Rules and Details:</strong> (Add rules or any other details you want about the event here.)
+                    </p>
+                    <p class="text-gray-600 mt-4">
+                      <strong>Additional Info:</strong> (Add any additional info, such as schedule, judges, etc.)
+                    </p>
+                  </div>
                 </div>
                 <div class="modal-footer mt-6 text-right">
                   <!-- Register Button -->
@@ -613,6 +494,7 @@
                 </div>
               </div>
             </div>
+            
 
             <div
               class="flex items-center space-x-8 bg-white shadow-lg rounded-lg p-6"
@@ -641,17 +523,10 @@
               </div>
             </div>
             <!-- Modal for Cinematic Saga -->
-            <div
-              id="modal-6"
-              class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
-            >
-              <div
-                class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2 relative"
-              >
+            <div id="modal-6" class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center">
+              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2 relative">
                 <div class="modal-header">
-                  <h2 class="text-3xl font-semibold text-gray-800">
-                    Cinematic Saga
-                  </h2>
+                  <h2 class="text-3xl font-semibold text-gray-800">Cinematic Saga</h2>
                   <!-- Close Button -->
                   <span
                     class="close-modal absolute top-0 right-0 p-4 cursor-pointer text-3xl text-black hover:text-red-600 transition-all"
@@ -660,25 +535,25 @@
                     ×
                   </span>
                 </div>
-                <div class="modal-body mt-4">
+                <div class="modal-body mt-4 flex flex-col lg:flex-row items-center lg:space-x-8">
+                  <!-- Image on the left -->
                   <img
                     src="./assets/eventlogos/samplelogo.png"
                     alt="Event Logo"
-                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4 mx-auto"
+                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mb-4 lg:mb-0"
                   />
-                  <p class="text-gray-600 mt-4">
-                    A celebration of visual storytelling, where directors,
-                    writers, photographers, and vloggers unite to express their
-                    creativity through film, script, and photography.
-                  </p>
-                  <p class="text-gray-600 mt-4">
-                    <strong>Rules and Details:</strong> (Add rules or any other
-                    details you want about the event here.)
-                  </p>
-                  <p class="text-gray-600 mt-4">
-                    <strong>Additional Info:</strong> (Add any additional info,
-                    such as schedule, judges, etc.)
-                  </p>
+                  <!-- Description on the right -->
+                  <div>
+                    <p class="text-gray-600">
+                      A celebration of visual storytelling, where directors, writers, photographers, and vloggers unite to express their creativity through film, script, and photography.
+                    </p>
+                    <p class="text-gray-600 mt-4">
+                      <strong>Rules and Details:</strong> (Add rules or any other details you want about the event here.)
+                    </p>
+                    <p class="text-gray-600 mt-4">
+                      <strong>Additional Info:</strong> (Add any additional info, such as schedule, judges, etc.)
+                    </p>
+                  </div>
                 </div>
                 <div class="modal-footer mt-6 text-right">
                   <!-- Register Button -->
@@ -691,6 +566,7 @@
                 </div>
               </div>
             </div>
+            
 
             <!-- Event 4: Quiz -->
             <div
@@ -719,13 +595,8 @@
               </div>
             </div>
             <!-- Modal for Quiz -->
-            <div
-              id="modal-7"
-              class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
-            >
-              <div
-                class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2 relative"
-              >
+            <div id="modal-7" class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center">
+              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2 relative">
                 <div class="modal-header">
                   <h2 class="text-3xl font-semibold text-gray-800">Quiz</h2>
                   <!-- Close Button -->
@@ -736,26 +607,25 @@
                     ×
                   </span>
                 </div>
-                <div class="modal-body mt-4">
+                <div class="modal-body mt-4 flex flex-col lg:flex-row items-center lg:space-x-8">
+                  <!-- Image on the left -->
                   <img
                     src="./assets/eventlogos/samplelogo.png"
                     alt="Event Logo"
-                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4 mx-auto"
+                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mb-4 lg:mb-0"
                   />
-                  <p class="text-gray-600 mt-4">
-                    Engage in a battle of wits across various domains like
-                    science, history, economics, entertainment, and current
-                    affairs. Test your knowledge and challenge your intellectual
-                    limits.
-                  </p>
-                  <p class="text-gray-600 mt-4">
-                    <strong>Rules and Details:</strong> (Add rules or any other
-                    details you want about the event here.)
-                  </p>
-                  <p class="text-gray-600 mt-4">
-                    <strong>Additional Info:</strong> (Add any additional info,
-                    such as schedule, judges, etc.)
-                  </p>
+                  <!-- Description on the right -->
+                  <div>
+                    <p class="text-gray-600">
+                      Engage in a battle of wits across various domains like science, history, economics, entertainment, and current affairs. Test your knowledge and challenge your intellectual limits.
+                    </p>
+                    <p class="text-gray-600 mt-4">
+                      <strong>Rules and Details:</strong> (Add rules or any other details you want about the event here.)
+                    </p>
+                    <p class="text-gray-600 mt-4">
+                      <strong>Additional Info:</strong> (Add any additional info, such as schedule, judges, etc.)
+                    </p>
+                  </div>
                 </div>
                 <div class="modal-footer mt-6 text-right">
                   <!-- Register Button -->
@@ -768,6 +638,7 @@
                 </div>
               </div>
             </div>
+            
 
             <!-- Event 5: More Fun Events -->
             <div
@@ -798,17 +669,10 @@
               </div>
             </div>
             <!-- Modal for More Fun Events -->
-            <div
-              id="modal-8"
-              class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
-            >
-              <div
-                class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2 relative"
-              >
+            <div id="modal-8" class="modal fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center">
+              <div class="modal-content bg-white rounded-lg p-8 w-3/4 lg:w-1/2 relative">
                 <div class="modal-header">
-                  <h2 class="text-3xl font-semibold text-gray-800">
-                    More Fun Events
-                  </h2>
+                  <h2 class="text-3xl font-semibold text-gray-800">More Fun Events</h2>
                   <!-- Close Button -->
                   <span
                     class="close-modal absolute top-0 right-0 p-4 cursor-pointer text-3xl text-black hover:text-red-600 transition-all"
@@ -817,26 +681,25 @@
                     ×
                   </span>
                 </div>
-                <div class="modal-body mt-4">
+                <div class="modal-body mt-4 flex flex-col lg:flex-row items-center lg:space-x-8">
+                  <!-- Image on the left -->
                   <img
                     src="./assets/eventlogos/samplelogo.png"
                     alt="Event Logo"
-                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mt-4 mx-auto"
+                    class="w-48 h-48 rounded-full border-4 border-blue-600 object-cover mb-4 lg:mb-0"
                   />
-                  <p class="text-gray-600 mt-4">
-                    Compete in Antakshari, showcase intellect in Debate, get
-                    creative with Cooking Without Fire, take on challenges in
-                    Roadies, shine in the Spotlight, and flaunt your style in
-                    Ramp Walk!
-                  </p>
-                  <p class="text-gray-600 mt-4">
-                    <strong>Rules and Details:</strong> (Add rules or any other
-                    details you want about the event here.)
-                  </p>
-                  <p class="text-gray-600 mt-4">
-                    <strong>Additional Info:</strong> (Add any additional info,
-                    such as schedule, judges, etc.)
-                  </p>
+                  <!-- Description on the right -->
+                  <div>
+                    <p class="text-gray-600">
+                      Compete in Antakshari, showcase intellect in Debate, get creative with Cooking Without Fire, take on challenges in Roadies, shine in the Spotlight, and flaunt your style in Ramp Walk!
+                    </p>
+                    <p class="text-gray-600 mt-4">
+                      <strong>Rules and Details:</strong> (Add rules or any other details you want about the event here.)
+                    </p>
+                    <p class="text-gray-600 mt-4">
+                      <strong>Additional Info:</strong> (Add any additional info, such as schedule, judges, etc.)
+                    </p>
+                  </div>
                 </div>
                 <div class="modal-footer mt-6 text-right">
                   <!-- Register Button -->
@@ -849,6 +712,7 @@
                 </div>
               </div>
             </div>
+            
           </div>
         </div>
       </section>
