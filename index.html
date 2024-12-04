@@ -35,29 +35,29 @@
     <link rel="stylesheet" href="./styles/styles.css?v=1.0" />
   </head>
 
-  <body class="bg-gray-100 font-sans">
+  <body class="bg-gray-900 font-sans">
     <!-- Navbar -->
-    <header class="bg-gray-200 px-6 py-4 rounded-lg shadow-md">
-      <div class="flex justify-between items-center container mx-auto">
-        <div class="text-2xl font-semibold headerbrand">KALAJNA</div>
-        <nav class="hidden md:flex gap-8 items-center text-lg">
-          <a href="#home" class="text-gray-800 hover:text-blue-600">Home</a>
-          <a href="#about" class="text-gray-800 hover:text-blue-600"
+    <header class="bg-black px-6 py-4  shadow-md">
+      <div class="flex justify-between items-center container mx-auto"  >
+        <div class="text-2xl font-semibold headerbrand" a>KALAJNA</div>
+        <nav class="hidden md:flex gap-8 items-center text-lg" >
+          <a href="#home" style="color: white;">Home</a>
+          <a href="#about"
             >About Us</a
           >
-          <a href="#events" class="text-gray-800 hover:text-blue-600">Events</a>
-          <a href="#rules" class="text-gray-800 hover:text-blue-600">Rules</a>
-          <a href="#registration" class="text-gray-800 hover:text-blue-600"
+          <a href="#events" >Events</a>
+          <a href="#rules">Rules</a>
+          <a href="#registration"
             >Registration</a
           >
-          <a href="#contact" class="text-gray-800 hover:text-blue-600"
+          <a href="#contact"
             >Contact Us</a
           >
         </nav>
         <!-- Mobile Menu Button -->
         <button
           id="menu-toggle"
-          class="md:hidden text-gray-800 focus:outline-none"
+          class="md:hidden text-white focus:outline-none"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -108,22 +108,22 @@
     <main>
       <section id="home" class="relative w-full h-screen">
         <video
-            class="w-full h-full object-cover filter blur-sm brightness-50"
+            class="w-full h-full object-cover filter  brightness-90"
             autoplay
             muted
             loop
           >
-          <source src="./assets/homebackground1.mp4" type="video/mp4" />
+          <source src="./assets/Kalanja_New.mp4" type="video/mp4" />
           Your browser does not support this Video.
         </video>
-        <div class="content-wrapper absolute text-white">
+        <!-- <div class="content-wrapper absolute text-white">
           <h1 class="maintext">KALAJNA</h1>
           <p class="subinfo">
             <b>With performances that promote unity and pride in our culture,
             Kalajna gives everyone a chance to appreciate our country’s
             diversity</b>
           </p>
-        </div>
+        </div> -->
         <div id="countdown-container">
           <div
             class="text-center bg-white p-2 rounded-xl shadow-lg max-w-xs w-full mx-auto mt-0 md:mt-0"
@@ -208,14 +208,14 @@
 </section>
 
 
-      <section id="events" class="bg-blue-50 py-16">
+      <section id="events" class="bg-blue-50 py-16 bg-cover bg-center" style="background-image: url('./assets/C0151T01.JPG'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="container mx-auto px-6 md:px-12 lg:px-20">
           <!-- Section Header -->
           <div data-aos="fade-right">
-            <h2 class="text-4xl font-bold text-gray-800 leading-tight">
+            <h2 class="text-4xl font-bold text-white leading-tight">
               Upcoming <span class="text-blue-600">Events</span>
             </h2>
-            <p class="text-gray-600 mt-4 text-lg">
+            <p class="text-white mt-4 text-lg">
               Explore 13 spectacular events crafted to inspire, entertain, and bring us all together.
             </p>
           </div>
@@ -224,10 +224,10 @@
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
             
             <!-- Event 1 -->
-            <div class="event-card flex items-center space-x-8 bg-white shadow-lg rounded-lg p-6" data-aos="fade-up">
+            <div class="event-card flex items-center space-x-8 bg-grey-800 shadow-lg rounded-lg p-6" data-aos="fade-up">
               <img src="./assets/eventlogos/samplelogo.png" alt="Event 1 Logo" class="w-32 h-32 rounded-full border-4 border-blue-600 object-cover"/>
               <div>
-                <h3 class="text-2xl font-semibold text-gray-800">Rhythmic Rendezvous</h3>
+                <h3 class="text-2xl font-semibold text-gray-600">Rhythmic Rendezvous</h3>
                 <p class="text-gray-600 text-sm mt-2">
                   A spectacular dance celebration featuring Western and Indian styles, where self-expression, cultural heritage, and high-energy performances come alive.
                 </p>
@@ -717,13 +717,13 @@
         </div>
       </section>
 
-      <section id="rules" class="bg-gray-100 py-16">
+      <section id="rules" class="bg-gray-100 py-16 bg-cover bg-center"  style="background-image: url('./assets/IMG_9140.JPG'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="container mx-auto px-6 md:px-12 lg:px-20">
           <div class="text-center md:text-left">
-            <h2 class="text-4xl font-bold text-gray-800 leading-tight">
+            <h2 class="text-4xl font-bold text-white leading-tight">
               <span class="text-blue-600">Rules</span> & Regulations
             </h2>
-            <p class="text-gray-600 mt-4 text-lg leading-relaxed">
+            <p class="text-white mt-4 text-lg leading-relaxed">
               Please read the rules and regulations carefully before registering
               for the event. Violation of any rule may lead to disqualification.
             </p>
