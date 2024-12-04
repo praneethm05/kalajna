@@ -14,13 +14,13 @@ header {
 
 header .headerbrand {
   font-family: "Bebas Neue", sans-serif;
-  color: #333;
+  color: #dad5d5;
   font-size: 30px;
   text-decoration: underline;
 }
 
 nav a {
-  color: #333;
+  color: #dbd9d9;
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
@@ -43,6 +43,7 @@ nav a:hover {
   align-items: center;
   position: relative;
 }
+
 
 .video-container {
   position: relative;
@@ -82,7 +83,7 @@ nav a:hover {
 
 .subinfo {
   font-size: 18px;
-  color: #d1d5db;
+  color: #d9dadb;
   font-weight: lighter;
   max-width: 600px;
   margin-left: auto;
@@ -139,12 +140,13 @@ footer {
 
 /* Make sure navbar styles are not overridden */
 header nav a {
-  color: #333 !important; /* Make sure it doesn’t get overridden */
+  color: #e2dede !important; /* Make sure it doesn’t get overridden */
 }
 
 header nav a:hover {
   color: #3182ce !important;
 }
+
 
 #about a:hover {
   transform: translateY(-3px);
